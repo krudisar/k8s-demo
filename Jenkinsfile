@@ -7,7 +7,7 @@ node {
         checkout scm
     }
 
-    stage('Build image') {
+    stage('Docker Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
