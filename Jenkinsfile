@@ -48,8 +48,12 @@ node {
 
             sh "export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
             
-            sh "whoami"
+            sh """
             
+            sudo -u jenkins bash
+            whoami 
+
+            """
             /*
             sh "/usr/bin/kubectl get nodes --insecure-skip-tls-verify"
             sh "cat /home/jenkins/kubeconf.conf"
