@@ -11,4 +11,13 @@ node {
         }
     }
 
+stage('Deploy') {
+
+        app.inside {
+            sh 'ifconfig'
+        }
+    }
+
+stage('Clone repository') {
+    }
 }
