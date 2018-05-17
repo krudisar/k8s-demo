@@ -12,8 +12,7 @@ node {
         /* Ideally, we would run a test framework against our image. */
 
         app.inside {
-            sh "echo \"Container image build number:\""
-            // sh "kubectl"
+            sh "kubectl"
         }
     }
 }
