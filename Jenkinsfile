@@ -39,17 +39,12 @@ node {
         app.inside {
             /* sh 'echo "Container image build number:${env.BUILD_NUMBER}"' */
             // sh "echo \"Build number is: \"${env.BUILD_NUMBER}"
-            // kubectl("get pods")
 
             sh """
             PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/demo/.local/bin:/home/demo/bin
             cd /usr/bin
-            kubectl
+            yum
             """
         }
     }
-}
-
-def kubectl(cmd) {
-    return sh(script: "/usr/bin/kubectl  ${cmd}", returnStdout: true)
 }
