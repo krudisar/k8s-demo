@@ -12,7 +12,7 @@ node {
         /* Ideally, we would run a test framework against our image. */
 
         app.inside {
-            sh "kubectl"
+            sh 'docker'
         }
     }
 }
