@@ -39,7 +39,12 @@ node {
         app.inside {
             /* sh 'echo "Container image build number:${env.BUILD_NUMBER}"' */
             // sh "echo \"Build number is: \"${env.BUILD_NUMBER}"
-            sh "cat /home/jenkins/kubeconf.conf"
+            sh """
+            
+            kubectl
+            cat /home/jenkins/kubeconf.conf
+            
+            """
         }
     }
 }
