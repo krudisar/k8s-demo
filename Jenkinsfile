@@ -38,7 +38,7 @@ node {
 
         app.inside {
             sh "echo \"Container image build number:${env.BUILD_NUMBER}\""
-            sh "kubectl"
+            // sh "kubectl"
         }
     }
 }
