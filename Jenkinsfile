@@ -42,6 +42,7 @@ node {
             // kubectl("get pods")
 
             sh """
+            PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/demo/.local/bin:/home/demo/bin
             sudo /usr/bin/kubectl
             """
         }
