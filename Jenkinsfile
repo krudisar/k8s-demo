@@ -39,6 +39,13 @@ node {
         app.inside {
             /* sh 'echo "Container image build number:${env.BUILD_NUMBER}"' */
             sh "echo \"Build number is: \"${env.BUILD_NUMBER}"
+
+            /* 
+            Kubernetes part
+            */
+            
+            sh "export KUBECONFIG=/etc/kubernetes/kubeconf.conf"
+            sh "kubectl get nodes --insecure-skip-tls-verify"
         }
     }
 }
