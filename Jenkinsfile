@@ -43,9 +43,9 @@ node {
             /* 
             Kubernetes part
             */
-            
+
             sh "export KUBECONFIG=/etc/kubernetes/kubeconf.conf"
-            sh "kubectl get nodes --insecure-skip-tls-verify"
+            sh "/usr/bin/kubectl get nodes --insecure-skip-tls-verify"
         }
     }
 }
