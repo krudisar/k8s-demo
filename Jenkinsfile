@@ -42,7 +42,7 @@ node {
             // kubectl("get pods")
 
             sh """
-            source /usr/bin/kubectl
+            /usr/bin/kubectl
             """
         }
     }
