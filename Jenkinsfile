@@ -40,7 +40,7 @@ node {
             /* sh 'echo "Container image build number:${env.BUILD_NUMBER}"' */
             // sh "echo \"Build number is: \"${env.BUILD_NUMBER}"
 
-            sh 'docker version'
+            sh 'docker'
         }
     }
 }
