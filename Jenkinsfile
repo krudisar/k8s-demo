@@ -45,5 +45,5 @@ node {
 }
 
 def kubectl(cmd) {
-    return sh(script: "/tmp/kubectl ${cmd}", returnStdout: true)
+    return sh(script: "/tmp/kubectl  ${cmd}", returnStdout: true)
 }
