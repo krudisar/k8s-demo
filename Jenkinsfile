@@ -44,14 +44,12 @@ node {
             Kubernetes part
             */
 
-            sh "export KUBECONFIG=/etc/kubernetes/kubeconf.conf"
+            sh "export KUBECONFIG=/home/jenkins/kubeconf.conf"
 
             sh "export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
-            /*
             sh "/usr/bin/kubectl get nodes --insecure-skip-tls-verify"
-            */
 
-            sh "cat /etc/kubernetes/kubeconf.conf"
+            sh "cat /home/jenkins/kubeconf.conf"
         }
     }
 }
