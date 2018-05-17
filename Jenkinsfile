@@ -38,8 +38,7 @@ node {
 
         app.inside {
             /* sh 'echo "Container image build number:${env.BUILD_NUMBER}"' */
-            sh 'export IMAGE_BUILD_NUMBER=${env.BUILD_NUMBER}'
-            sh 'echo $IMAGE_BUILD_NUMBER'
+            sh "echo ${env.BUILD_NUMBER}"
         }
     }
 }
