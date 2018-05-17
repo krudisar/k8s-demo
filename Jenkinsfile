@@ -45,9 +45,13 @@ node {
             */
 
             sh "export KUBECONFIG=/etc/kubernetes/kubeconf.conf"
-            
+
             sh "export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
+            /*
             sh "/usr/bin/kubectl get nodes --insecure-skip-tls-verify"
+            */
+
+            sh "cat /etc/kubernetes/kubeconf.conf"
         }
     }
 }
