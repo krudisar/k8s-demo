@@ -41,7 +41,7 @@ node {
             // sh "echo \"Build number is: \"${env.BUILD_NUMBER}"
             // kubectl("get pods")
 
-            sh "cat /var/lib/jenkins/kubeconf.conf"
+            sh "/usr/bin/kubectl"
         }
     }
 }
