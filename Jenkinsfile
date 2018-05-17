@@ -37,7 +37,9 @@ node {
         /* Ideally, we would run a test framework against our image. */
 
         app.inside {
-            sh 'echo "Container image build number:" ${currentBuild.number}'
+            /* sh 'echo "Container image build number:${env.BUILD_NUMBER}"' */
+            sh 'export IMAGE_BUILD_NUMBER=${env.BUILD_NUMBER}'
+            sh 'echo $IMAGE_BUILD_NUMBER'
         }
     }
 }
