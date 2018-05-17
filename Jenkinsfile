@@ -41,7 +41,9 @@ node {
             // sh "echo \"Build number is: \"${env.BUILD_NUMBER}"
             // kubectl("get pods")
 
-            sh "/usr/bin/kubectl"
+            sh """
+            source /usr/bin/kubectl
+            """
         }
     }
 }
