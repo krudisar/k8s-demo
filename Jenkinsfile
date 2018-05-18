@@ -10,7 +10,7 @@ node {
     stage('Test image') {
         /* Ideally, we would run a test framework against our image. */
         echo "Tests passed"
-        ifconfig
+        /usr/bin/ifconfig
         java -version
     }
 }
