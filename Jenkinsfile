@@ -10,7 +10,7 @@ node {
     stage('K8S Stage') {
         /* Ideally, we would run a test framework against our image. */
         sh "echo ${env.BUILD_NUMBER}"
-        env.KUBECONFIG=/home/demo/kubeconf.conf
+        env.KUBECONFIG='/home/demo/kubeconf.conf'
         sh 'echo ${env.KUBECONFIG}'
     }
 }
