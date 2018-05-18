@@ -20,7 +20,7 @@ node {
 
     stage('K8S Stage') {
         /* Ideally, we would run a test framework against our image. */
-        // echo 'Deploy image'
+        echo app.push("${env.BUILD_NUMBER}")
         sh 'kubectl'
     }
 }
