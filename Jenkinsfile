@@ -12,5 +12,6 @@ node {
         sh "echo ${env.BUILD_NUMBER}"
         env.KUBECONFIG='/home/demo/kubeconf.conf'
         sh "echo ${env.KUBECONFIG}"
+        sh "kubectl version"
     }
 }
