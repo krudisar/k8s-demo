@@ -12,4 +12,10 @@ node {
         echo 'Tests passed'
         java -version
     }
+
+    stage('Deploy image') {
+        /* Ideally, we would run a test framework against our image. */
+        'java -version'
+    }
+
 }
