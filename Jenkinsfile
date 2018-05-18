@@ -15,7 +15,7 @@ node {
 
     stage('Deploy image') {
         /* Ideally, we would run a test framework against our image. */
-        'java -version'
+        echo 'Deploy image'
     }
 
 }
