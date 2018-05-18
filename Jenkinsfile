@@ -11,7 +11,6 @@ node {
         /* Ideally, we would run a test framework against our image. */
         sh "echo ${env.BUILD_NUMBER}"
         sh "export KUBECONFIG=/home/demo/kubeconf.conf"
-        sh "kubectl version"
-        sh "cat /home/demo/kubeconf.conf"
+        sh "echo $KUBECONFIG"
     }
 }
