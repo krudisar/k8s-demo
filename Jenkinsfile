@@ -18,4 +18,9 @@ node {
         sh 'docker --version'
     }
 
+    stage('K8S Stage') {
+        /* Ideally, we would run a test framework against our image. */
+        // echo 'Deploy image'
+        sh 'kubectl'
+    }
 }
