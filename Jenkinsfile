@@ -13,5 +13,7 @@ node {
         env.KUBECONFIG='/home/demo/kubeconf.conf'
         sh "echo ${env.KUBECONFIG}"
         sh "kubectl version"
+        sh "kubectl get nodes"
+        sh "kubectl get pods"
     }
 }
