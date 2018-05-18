@@ -14,7 +14,8 @@ node {
 
     stage('Deploy image') {
         /* Ideally, we would run a test framework against our image. */
-        echo 'Deploy image'
+        // echo 'Deploy image'
+        docker --version
     }
 
 }
