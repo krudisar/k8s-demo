@@ -1,0 +1,30 @@
+===== DEPLOY & EXPOSE
+
+kubectl run k8s-demo --image=krudisar/k8s-demo:latest --port=8080
+kubectl expose deployment k8s-demo --type=NodePort --port=8080
+
+===== EXTERNAL ACCESS
+
+export NODE_PORT=$(kubectl get services/k8s-demo -o go-template='{{(index .spec.ports 0).nodePort}}')
+echo NODE_PORT=$NODE_PORT
+curl 10.0.0.150:$NODE_PORT
+
+===== UPDATE IMAGE
+
+watch kubectl get pods
+kubectl set image deployments/k8s-demo k8s-demo=krudisar/k8s-demo:16
+watch kubectl get pods
+curl 10.0.0.150:$NODE_PORT
+
+=====
+
+kubectl rollout status deployments/k8s-demo
+
+===== SCALE DEPOYMENT
+
+kubectl scale --current-replicas=1 --replicas=3 deployment/k8s-demo
+(kubectl scale --replicas=4 deployment/k8s-demo)
+watch kubectl get pods
+
+=====
+ 
