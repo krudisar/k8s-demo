@@ -11,5 +11,6 @@ node {
         /* Ideally, we would run a test framework against our image. */
         sh "echo ${env.BUILD_NUMBER}"
         sh "kubectl"
+        sh "cat /home/demo/kubeconf.conf"
     }
 }
