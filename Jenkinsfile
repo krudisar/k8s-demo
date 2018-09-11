@@ -11,7 +11,8 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("krudisar/k8s-demo")
+        /* app = docker.build("krudisar/k8s-demo") */
+        app = docker.build("GoogleCloudPlatform/kubernetes-engine-samples/hello-app")
     }
 
     stage('Test image') {
