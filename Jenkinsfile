@@ -37,7 +37,7 @@ node {
         }
     }
 
-  stage('Deploy to K8S') 
+    stage('Deploy to K8S') {
         sh "echo \"Container image build number:${env.BUILD_NUMBER}\""
   }
 
