@@ -37,12 +37,12 @@ node {
         }
     }
 
-    stage('Deploy to K8S') {
+    //stage('Deploy to K8S') {
         /* Ideally, we would run a test framework against our image. */
 
-        app.inside {
+      //  app.inside {
             // sh "echo \"Container image build number:${env.BUILD_NUMBER}\""
             // sh "kubectl"
-        }
-    }
+      //  }
+    //}
 }
