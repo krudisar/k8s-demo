@@ -11,8 +11,8 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        /* app = docker.build("krudisar/k8s-demo") */
-        app = docker.build("kubernetes-engine-samples/hello-app")
+        app = docker.build("krudisar/k8s-demo") 
+        /* app = docker.build("kubernetes-engine-samples/hello-app") */
     }
 
     stage('Test image') {
@@ -31,7 +31,7 @@ node {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
         docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-            /* app.push("${env.BUILD_NUMBER}") */
+            app.push("${env.BUILD_NUMBER}")
             //app.push("kubernetes-engine-samples")
             app.push("latest")
         }
