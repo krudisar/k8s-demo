@@ -2,7 +2,7 @@
 FROM scratch
 
 # copy our static linked executable
-COPY helloworld helloworld
+COPY hello helloworld
 
 # tell how to run this container 
 CMD ["./helloworld"]
